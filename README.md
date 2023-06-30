@@ -8,5 +8,6 @@ npm install axios firebase styled-components react-router-dom @reduxjs/toolkit r
 create folder -> utils, components, pages, store
 create pages -> Login.jsx, Signp.jsx , Netflix.jsx
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-define path
+setup react-roter-dom path
+setup firebase configuration
 
