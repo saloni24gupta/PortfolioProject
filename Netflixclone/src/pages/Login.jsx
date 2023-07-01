@@ -31,7 +31,7 @@ function Login() {
             <BackgroundImage />
             <div className='content'>
                 <Header />
-                <div className="form-container flex-column a-center j-center">
+                <div className="form-container flex column a-center j-center">
                     <div className="form flex column a-center j-center">
                         <div className="title">
                             <h3>Login</h3>
@@ -77,47 +77,38 @@ position: relative;
     display: grid;
     grid-template-rows: 15vh 85vh;
 
-    .body {
-        gap: 1rem;
-    }
-    .text {
-        gap: 1rem;
-        text-align: center;
-        font-size: 2rem;
-    }
-    h1 {
-        padding: 0 2rem;        
-    }
+   .form-container {
+    gap: 2rem;
+    height: 85vh;
 
-}
-
-.form {
-    display: grid;
-    grid-template-columns: ${({ showpassowrd }) => showpassowrd ? " 1fr 1fr" : "2fr 1fr"};
-    width: 60%;
-
-    input {
-        color: black;
-        padding: 1.5rem;
-        border: 1px solid black;
-        font-size: 1.2rem;
-        &:focus {
-            outline: none;
+    .form {
+       padding: 2rem;
+       background-color: #000000b0;
+       width: 25vw;
+       gap: 2rem;
+       color: white;
+       
+       .container {
+        gap: 2rem;
+        input {
+            padding: 0.5rem 1rem;
+            width: 15rem; 
         }
-        
-    }
-    
-}
-
 button {
     padding: 0.5rem 1rem;
     background-color: #e50914;
-    color: #fff;
-    border: none;
-    cursor: pointer;
     border-radius: 0.2rem;
+    border: none;
+    color: white;
+    cursor: pointer;
     font-weight: bolder;
-    font-size: 1.05rem; 
+    font-size: 1.05rem;
+}
+
+       }
+    }
+   }
+
 }
 
 
