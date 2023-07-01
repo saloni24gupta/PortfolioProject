@@ -6,7 +6,7 @@ import { onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth';
 import { firebaseAuth } from '../utils/firebase-config';
 import { useNavigate } from 'react-router-dom';
 function Login() {
-    const [showpassword, setShowPassword] = useState(false)
+
     const navigate = useNavigate();
     const [formValues, setFormValues] = useState({
         email: '',
@@ -18,7 +18,7 @@ function Login() {
             const { email, password } = formValues;
             await signInWithEmailAndPassword(firebaseAuth, email, password)
         }
-        catch {
+        catch (err) {
             console.log(err)
         }
     };
@@ -33,37 +33,38 @@ function Login() {
                 <Header />
                 <div className="form-container flex-column a-center j-center">
                     <div className="form flex column a-center j-center">
-                        <h3>Login</h3>
-                    </div>
-                    <div className="container flex column">
-                        <input type="email" placeholder="Email Address" name="email" value={formValues.email} onChange={(e) => setFormValues({
-                            ...formValues,
-                            [e.target.name]: e.target.value,
-                        })} />
-                        {(<input type="password" placeholder="password" name="password"
-                            value={formValues.password}
-                            onChange={(e) => {
-                                setFormValues({
-                                    ...formValues,
-                                    [e.target.name]: e.target.value,
-                                })
-                            }} />)
-                        }
+                        <div className="title">
+                            <h3>Login</h3>
+                        </div>
 
-                        {<button onClick={() => setShowPassword(true)}>Log In</button>}
-                    </div>
-                    <button onClick={handleLogIn}>Sign Up</button>
+                        <div className="container flex column">
 
+                            <input type="email" placeholder="Email Address" name="email"
+                                value={formValues.email}
+                                onChange={(e) =>
+                                    setFormValues({
+                                        ...formValues,
+                                        [e.target.name]: e.target.value,
+                                    })} />
+                            <input type="password" placeholder="password" name="password"
+                                value={formValues.password}
+                                onChange={(e) => {
+                                    setFormValues({
+                                        ...formValues,
+                                        [e.target.name]: e.target.value,
+                                    })
+                                }} />
+
+                            <button onClick={handleLogIn}>Log IN</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-        
-    </Container >
-  )
+        </Container >
+    )
 }
 
 export default Login
-
 const Container = styled.div`
 position: relative;
 .content {
