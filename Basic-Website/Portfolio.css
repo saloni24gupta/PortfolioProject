@@ -48,6 +48,19 @@ nav ul li {
     font-size:2rem;
     margin: 70px 0;
 }
+.leftSection .buttons {
+  padding: 23px;
+}
+
+.leftSection .btn {
+    padding: 12px;
+    background-color: #1e2167;
+    color: white;
+    border: 2px solid white;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 6px;
+}
 
 .rightSection img {
     width: 80%;
@@ -125,4 +138,42 @@ margin: 0 140px;
     width: 150px;
     color: gray;
     font-style: 9px;
+}
+
+footer {
+    background-color: #291f1f;
+    height: 40vh;
+}
+.footer {
+    display: flex;
+    padding: 23px 122px;
+    margin: 20px;
+    padding: 12px;
+}
+
+footer img {
+    height: 30px;
+    width: 30x;
+    border-radius: 50%;
+    margin: 10px;
+    position: relative;
+    top: 24px;
+}
+
+.f-first {
+    list-style: none;
+    color: white;
+}
+
+ .footer .f-first ul{
+color:  white;
+list-style: none;
+
+}
+.footer .f-first ul li a {
+     color: white;
+     text-decoration: none;
+}
+.f-text-center {
+    text-align: center;
 }
