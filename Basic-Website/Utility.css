@@ -48,3 +48,12 @@
     letter-spacing: 2px;
 }
 
+.my-1 {
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+.px-2 {
+    padding-left: 13px;
+    padding-right: 13px;
+}
