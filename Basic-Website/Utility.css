@@ -58,7 +58,7 @@ background-repeat: norepeat;
 
 .container {
     font-family: 'Poppins', sans-serif;
-    max-width: 80vw;
+    max-width: 100vw;
 }
 
 .font-bold{
@@ -82,9 +82,10 @@ background-repeat: norepeat;
     padding-right: 13px;
 }
 
-.btn {
+#btn {
     display: block;
-    max-width: 100vw;
+    /* max-width: vw; */
+    width: 80%;
     background-color:rgba(116, 235, 213, 0.6);
     padding-top: 5px  ;
     color: white;
@@ -93,6 +94,6 @@ background-repeat: norepeat;
     cursor: pointer;
 
 }
-.btn:hover {
+#btn:hover {
     background-color: #0fc5dd;
 }

@@ -1,6 +1,7 @@
 :root {
     --lg-color: linear-gradient(to left, #74ebd5, #9face6);
 }
+
 body {
     background-image: var(--lg-lightcolor), url('./assets/1802075.jpg');
     background-repeat: no-repeat;
@@ -16,6 +17,9 @@ body {
     padding: 0;
 
 }
+#form {
+    padding: 19px 0 0 0;
+}
 
 .container {
     background-color: #fff;
@@ -24,16 +28,16 @@ body {
     box-shadow: 0 2.8px 2.20px rgba(0, 0, 0, 0..034), 0 6.7px px 5.3px rgba(0, 0, 0, 0.48) 0 12px;
     /* overflow: hidden; */
     width: 70vw;
-    height: 90vh;
- max-width: 100%;
+    height: 100vh;
+    max-width: 100%;
 }
 
 .header {
     display: flex;
     justify-content: center;
-   background-color: #a7eaec;
+    background-color: #a7eaec;
     padding: 15px 0;
-   
+
 }
 
 label {
@@ -41,30 +45,79 @@ label {
     position: relative;
     left: 20px;
 }
-input {
+
+.form-control {
+    position: relative;
+    margin: 7px;
+}
+
+.form-control input {
     display: flex;
+    position: relative;
+    left: 20px;
     width: 60vw;
     margin: auto;
-  
-    padding: 5px
+    border-radius: 5px;
+    border: 2px solid #f0f0f0;
+    font-family: 14px;
+    padding: 12px;
+    align-items: center;
+ 
+
 }
-input:focus{
-    border: 1px solid red;
+
+.form-control input:focus {
+    border-color: #777;
 }
- i {
+
+.form-control.success input {
+    border-color: #2ecc71;
+
+}
+
+.form-control.error input {
+    border-color: #e74c5c;
+
+}
+
+
+.form-control i {
     display: flex;
-    top: -27px;
+    position: absolute;
+    right: 0%;
+    top: 38px;
     justify-content: flex-end;
     flex-direction: row;
     margin-right: 70px;
+    visibility: hidden;
 }
 
-.fa-solid {
-    display: flex;
+.form-control.error small {
+    visibility: visible;
 }
-.mmdiv {
-    position: relative;
-    top: -20px;
-    justify-content: flex-end;
-    display: flex;
+
+.form-control small {
+    color: #e74c3c;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.success i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+    color: #e74c5c;
+    visibility: visible;
+}
+
+form {
+    padding: 40px;
+}
+
+.form-control {
+    display: inline-block;
 }
