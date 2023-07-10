@@ -20,41 +20,54 @@
         <form class="form" id="form">
             <div class="form-control">
                 <label>Username</label>
-                <input type="text" name="" id="username" placeholder="enter your full name">
-                <i class="fa-solid fa-check-circle"></i>
-                <i class="fa-solid fa-exclamation-circle"></i>
-                <small>Error Msg</small>
+                <input type="text" name="" id="username" placeholder="enter your full name" required>
+                <div class="mmdiv">
+                <i class="my fa-solid fa-check-circle"></i>
+                <i class=" my fa-solid fa-exclamation-circle" title="Please enter username"></i>
+                </div>
+                <!-- <small>Error Msg</small> -->
             </div>
             <div class="form-control">
 
                 <label>Email</label>
-                <input type="text" name="" id="email" placeholder="enter your email address">
+                <input type="text" name="" id="email" placeholder="enter your email address"required>
+                <div class="mmdiv">
                 <i class="fa-solid fa-check-circle"></i>
-                <i class="fa-solid fa-exclamation-circle"></i>
-                <small>Error Msg</small>
+                <i class="fa-solid fa-exclamation-circle"  title="Please enter email"></i>
+                </div>
+                <!-- <small>Error Msg</small> -->
             </div>
             <div class="form-control">
 
                 <label>Phone Number</label>
-                <input type="number" name="" id="phonenumber" placeholder="enter your phone number">
-                <i class="fa-solid fa-check-circle"></i>
-                <i class="fa-solid fa-exclamation-circle"></i>
-                <small>Error Msg</small>
+                <input type="number" name="" id="phonenumber" placeholder="enter your phone number" required>
+                <div class="mmdiv">
+                <i class="fa-solid fa-check-circle" ></i>
+                <i class="fa-solid fa-exclamation-circle" title="Please enter phone number"></i>
+                </div>
+                <!-- <small>Error Msg</small> -->
             </div>
             <div class="form-control">
                 <label>Password</label>
-                <input type="text" name="" id="password" placeholder="enter your password">
+               
+                <input type="text" name="" id="password" placeholder="enter your password" required>
+                <div class="mmdiv">
                 <i class="fa-solid fa-check-circle"></i>
-                <i class="fa-solid fa-exclamation-circle"></i>
-                <small>Error Msg</small>
+                <i class="fa-solid fa-exclamation-circle" title="Please enter password"></i>
+            </div>
+                <!-- <small>Error Msg</small> -->
+               
             </div>
             <div class="form-control">
                 <label>Confirm Passsword</label>
-                <input type="text" name="" id="passwordcheck" placeholder="enter your confirm password">
+                <input type="text" name="" id="passwordcheck" placeholder="enter your confirm password" required >
+                <div class="mmdiv">
                 <i class="fa-solid fa-check-circle"></i>
-                <i class="fa-solid fa-exclamation-circle"></i>
+                <i class="fa-solid fa-exclamation-circle" title="Please enter confirm password"></i>
+                </div>
                 <small>Error Msg</small>
             </div>
+            <input type="submit" class="btn" id="btn" value="Submit">
         </form>
     </div>
     <script src="ValidationForm.js"></script>

@@ -1,13 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,700;1,100&family=Roboto:wght@100&display=swap');
 
-
+:root {
+    --myfont: 'Roboto', sans-serif;
+    --my-btn-font: 'Montserrat', sans-serif;
+    --lg-lightcolor: linear-gradient(to left, rgba(116, 235, 213, 0.6), rgba(159, 172, 230, 0) );
+    --lg-color: linear-gradient(to left, #74ebd5, #9face6);
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/* 
+background image set 
+//set few property
+background-image: url('/path of image')
+background-repeat: norepeat;
+    background-size: cover;
+     */
 /* font awesome and body basic design */
 /* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> */
 /* body {
@@ -68,4 +80,19 @@
 .px-2 {
     padding-left: 13px;
     padding-right: 13px;
+}
+
+.btn {
+    display: block;
+    max-width: 100vw;
+    background-color:rgba(116, 235, 213, 0.6);
+    padding-top: 5px  ;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+
+}
+.btn:hover {
+    background-color: #0fc5dd;
 }
