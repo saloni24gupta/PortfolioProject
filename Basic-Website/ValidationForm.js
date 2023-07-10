@@ -33,7 +33,10 @@ const validate = () => {
     if(EmailAdd === ""){
         setErrormsg(Email, 'Email cannot be empty');
     }
-    else if (isEmail()) {
-        
+    else if (!isEmail(EmailAdd)) {
+setErrormsg(Email, 'Not  a validemail')
+    }
+    else {
+        setSuccessMsg(Email);
     };
 }
