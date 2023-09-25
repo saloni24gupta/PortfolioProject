@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRACTICE</title>
+</head>
+
+<body>
+    <div class="container" id="demo">
+        <h3>The XMLHttpRequest object</h3>
+        <button onclick="loadDoc()">Change content</button>
+        <p id="count">show count</p>
+        <button onclick="setcount()">count</button>
+    </div>
+
+
+    <script>
+       
+        function setcount() {
+            let xhttp = new XMLHttpRequest();
+
+            xhttp.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200) {
+                    document.getElementById("demo").innerHTML = this.responseText;
+                }
+            };
+            let x = 40;
+            let obj = xhttp.open("GET", `https://jsonplaceholder.typicode.com/posts/${x}`, true);
+
+            xhttp.send();
+
+        }
+            for (let count = 0; count < 100; count++) {
+          
+                document.getElementById("count").innerHTML = this.responseText;
+            }
+            console.log(count)
+
+        }
+        function loadDoc() {
+            let xhttp = new XMLHttpRequest();
+
+            xhttp.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200) {
+                    document.getElementById("demo").innerHTML = this.responseText;
+                }
+            };
+            let x = 40;
+            let obj = xhttp.open("GET", `https://jsonplaceholder.typicode.com/posts/${x}`, true);
+
+            xhttp.send();
+
+        }
+    </script>
+</body>
+
+</html>
