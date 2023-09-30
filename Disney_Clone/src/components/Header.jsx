@@ -31,7 +31,7 @@ function Header() {
            </a>
         </NavMenu>
 
-        <UserImg/>
+        <UserImg src="../src/assets/Images/Img.jpg"/>
     </Nav>
   )
 }
@@ -44,16 +44,21 @@ background: #090b13;
 display: flex;
 align-items: center;
 padding: 0 30px;
+justify-content: space-between;
 `
 const Logo = styled.img`
 width: 80px;
 `
 const NavMenu = styled.div`
 display: flex;
+flex: 1;
+margin-left: 25px;
+align-items: center;
 a {
     display: flex;
     align-items: center;
     padding: 0 12px;
+    cursor: pointer;
 
     img {
         height: 20px;
@@ -65,4 +70,8 @@ a {
     }
 }
 `
-const UserImg = styled.img``
+const UserImg = styled.img`
+height: 50px;
+width: 50px;
+border-radius: 50%; 
+`
