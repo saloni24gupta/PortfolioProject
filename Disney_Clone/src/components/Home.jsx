@@ -13,23 +13,23 @@ function Home() {
 }
 
 export default Home
-
 const Container = styled.main`
-min-height: calc(100vh - 70px);
+position: relative;
+min-height: calc(100vh - 250px);
+overflow-x: hidden;
+display: block;
+top: 72px;
 padding: 0 calc(3.5vw + 5px);
-// width: calc(100vh - 10vw);
 
-position: fixed;
-
-&:before {
-  background: url("../src/assets/Images/home-background.png") center center / cover no-repeat fixed;
+&:after {
+  background: url("/images/home-background.png") center center / cover
+    no-repeat fixed;
   content: "";
   position: absolute;
+  inset: 0px;
+  opacity: 1;
   z-index: -1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+}
 }
 
 

@@ -1,113 +1,111 @@
-import React from 'react'
-// import Slider from "react-slick";
+import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import styled from 'styled-components';
+import Slider from "react-slick";
 
-// import Buttons from './Buttons';
-function ImgSlider() {
-    // let settings = {
-    //     dots: true,
-    //     infinite: true,
-    //     speed: 500,
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     autoplay: true
-    // };
-    return (
-        <Carousel>
-            <Container>
-            <Wrap >
-                <img src="../src/assets/Images/slider-badag.jpg" alt="hjgjghjg" />
-            </Wrap>
-            
-          
-        </Container>
-        </Carousel>
-    )
-}
+const ImgSlider = (props) => {
+  let settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+  };
+  return (
+    <Carousel {...settings}>
+      <Wrap>
+        <a>
+          <img src="../src/assets/Images/slider-badging.jpg" alt="Image" />
+        </a>
+      </Wrap>
 
-export default ImgSlider
+      <Wrap>
+        <a>
+          <img src="../src/assets/Images/slider-scale.jpg" alt="Imaage" />
+        </a>
+      </Wrap>
 
-const Container = styled.div`
+      <Wrap>
+        <a>
+          <img src="../src/assets/Images/slider-badag.jpg" alt="Image" />
+        </a>
+      </Wrap>
 
-margin: auto;
-`
+      <Wrap>
+        <a>
+          <img src="../src/assets/Images/slider-scales.jpg" alt="Image" />
+        </a>
+      </Wrap>
+    </Carousel>
+  );
+};
 
-const Carousel = styled.div`
-display: flex;
-flex-direction: row;
-overflow: visible;
-// background-Image: url("../src/assets/Images/slider-scales.jpg");
-background-position: center center; 
-background-size: cover;
-background-repeat: no-repeat;
-position: relative;
+const Carousel = styled(Slider)`
+  margin-top: 20px;
 
-width: 100vw;
-height: 250px;
-
-
-&:before {
-    content: "";
-    cursor: pointer;
+  & > button {
+    opacity: 0;
+    height: 100%;
+    width: 5vw;
     z-index: 1;
-    top: 45%;
-    background-color: transparent;
-    opacity: 0.5;
-    color: black;
-    position: absolute;
-    left: 38px;
-    background-Image: url("./src/assets/Images/right-arrow.png");
-    transform: rotate(180deg);
-    background-position: center center;
-    background-size: cover;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-}
 
-&:after {
-    content: "";
-    z-index: 1;
-    right: 38px;
-    top: 45%;
-    opacity: 0.5;
-    background-color: none;
-    color: blue;
-    position: absolute;
-    background-Image: url("./src/assets/Images/right-arrow.png");
-    background-position: center center;
-    background-size: cover;
-    height: 30px;
-    width: 30px;
+    &:hover {
+      opacity: 1;
+      transition: opacity 0.2s ease 0s;
+    }
+  }
+
+  ul li button {
+    &:before {
+      font-size: 10px;
+      color: rgb(150, 158, 171);
+    }
+  }
+
+  li.slick-active button:before {
+    color: white;
+  }
+
+  .slick-list {
+    overflow: initial;
+  }
+
+  .slick-prev {
+    left: -75px;
+  }
+
+  .slick-next {
+    right: -75px;
+  }
+`;
+
+const Wrap = styled.div`
+
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+
+  a {
+    border-radius: 4px;
+    box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+      rgb(0 0 0 / 73%) 0px 16px 10px -10px;
     cursor: pointer;
-    border-radius: 50%;
-}
-`
+    display: block;
+    position: relative;
+    padding: 4px;
 
-const Wrap = styled.div
-`
-cursor: pointer;
-width: calc(100vw - 10vw);
-background-position: center center 
-background-size: cover;
-background-repeat: no-repeat;
-img {
-    width: 89vw;
-    height: 36vh;
-    border-radius: 5px;
-    border: 4px solid transparent;
-    box-shadow: rgba(0 0 0 / 69%) 0px 26px 30px -10px,
-    rgb(0 0 0 / 73%) 0px 16px 10px -10px;
-    transition-duration: 300ms;
-}
+    img {
+      width: 100%;
+      height: 100%;
+    }
 
-&:hover {
-    border: 4px solid rgba(249, 249, 249, 0.8)
-}
+    &:hover {
+      padding: 0;
+      border: 4px solid rgba(249, 249, 249, 0.8);
+      transition-duration: 300ms;
+    }
+  }
+`;
 
-
-`
-
-
+export default ImgSlider;
