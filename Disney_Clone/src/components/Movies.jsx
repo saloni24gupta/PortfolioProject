@@ -30,7 +30,7 @@ function Movies() {
                 <Wrap>
                     <img src="../src/assets/Images/movies.jpg" alt="" />
                 </Wrap>
-                <img src="../src/assets/Images/movies.jpg" alt="" />
+               
             </Content>
         </Container>
 
