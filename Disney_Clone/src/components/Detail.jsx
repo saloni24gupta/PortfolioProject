@@ -28,6 +28,15 @@ function Detail() {
         </GroupWatchbutton>
 
       </Controls>
+
+      <SubTitle>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia repudiandae labore officiis laudantium ullam maiores minima earum maxime commodi quaerat! 
+      </SubTitle>
+
+      <Description>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, unde! Facere labore blanditiis deleniti deserunt dolores, soluta molestiae, nulla est dolorem accusamus nemo magnam dicta enim facilis et fugiat ullam. Iusto rerum optio magni ex dolorum quibusdam tenetur dignissimos sequi!
+      </Description>
+
     </Container>
   )
 }
@@ -130,4 +139,23 @@ span {
 
 const GroupWatchbutton = styled(AddButton)`
 background: rgb(0, 0, 0);
+`
+
+const SubTitle = styled.div`
+position: absolute;
+top: 62vh;
+color: rgb(249, 249, 249);
+font-size: 15px;
+padding: 3.5vw;
+ min-height: 20px;
+margin-top: 26px;
+`
+const Description = styled.div`
+position: absolute;
+top: 64vh;
+padding: 0 3.5vw;
+line-height: 1.4;
+// font-size: 20px;
+// margin-top: 16px;
+color: rgb(249, 249, 249);
 `
