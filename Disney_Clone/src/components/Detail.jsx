@@ -154,6 +154,7 @@ const Description = styled.div`
 position: absolute;
 top: 64vh;
 padding: 0 3.5vw;
+max-width: 500px;
 line-height: 1.4;
 // font-size: 20px;
 // margin-top: 16px;
